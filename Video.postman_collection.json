@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "80ae1d93-5332-45a5-b473-a950d868ad6a",
+		"name": "Video",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "video132@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "fdsgdsgdsgdsg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://video.local/api/login",
+					"protocol": "http",
+					"host": [
+						"video",
+						"local"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Video",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk0Njc3ZWEwZjE5YzUwZDEzNmNmZWYxYTBjOGQwMWVkODkwMDllODViZDk5NzNiZjNmY2IxMzZkMWY1MDI3ZGQ3NWI1ZGNkMDU3MDAyZmUzIn0.eyJhdWQiOiIyIiwianRpIjoiOTQ2NzdlYTBmMTljNTBkMTM2Y2ZlZjFhMGM4ZDAxZWQ4OTAwOWU4NWJkOTk3M2JmM2ZjYjEzNmQxZjUwMjdkZDc1YjVkY2QwNTcwMDJmZTMiLCJpYXQiOjE1NzE3MzM0NTcsIm5iZiI6MTU3MTczMzQ1NywiZXhwIjoxNTczMDI5NDU3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.0QCyT2bdtQP6dA4pib7cju1dh0RKCEHwIL3HKLvF-P-YQ7WFciXt7mppVUOmqiebU3kwTG0OUNX-9aYIn-GnSPwk2h4G-9aOPvmMXyNbkwX9G9mE_YIvp8ZPDlNcKnypZoX07rOYpbrkytCRe0Nkrc139DkjSf7I9Oe5TbHviI5h6d06f8BnhAdUbpyPAZF-8W4CC4Cnez6E_MxX7RrNSppFrPA3FdAhSniw3H53MfxM5XK0w7obnlef58ARtc5tdvj_6IAoqqPPp9TOtDnzMV7atggbQubqquK6Gedxuv1izIAC1FO1XSLpNIqZ3iE2yhcHWz172j1Qetl9TMYCk7dAUw_-befxnihS9nQwcR0wV2EHKtY2lYxpV2QCBbXiM1XFTkU38QSwLOXJPp5Lp2oa0C3ED7dbgDu-rFZKrGFhmSBE1B5ZQJJ5cY4kuXHNCLaGQPADb8zokyAKFK5cTxwnE7aXqpIXG3CegB7XYf4lCsZxY2lA2nIwTbb-lpAtWfivWqkEh8GF89b6VlVeySgrwQ2mbqZh7BEZzz9vxN2e3o2rArzLV2yxswrP-0JO31D0Lh4-0erQCNwNvWSbcj_AYSREh0vk06yphbR2cpvNT4BhjdZIGc3syiwXFmRqQAxD56FUbSXVTDbOsD4Cb-FAo7NW9G3Tb8M5ASY8nSQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "media",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "http://video.local/api/media/save",
+					"protocol": "http",
+					"host": [
+						"video",
+						"local"
+					],
+					"path": [
+						"api",
+						"media",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "video1342@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "gdsgsdgds",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "smander",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Alex",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://video.local/api/register",
+					"protocol": "http",
+					"host": [
+						"video",
+						"local"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Total Video Size",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk0Njc3ZWEwZjE5YzUwZDEzNmNmZWYxYTBjOGQwMWVkODkwMDllODViZDk5NzNiZjNmY2IxMzZkMWY1MDI3ZGQ3NWI1ZGNkMDU3MDAyZmUzIn0.eyJhdWQiOiIyIiwianRpIjoiOTQ2NzdlYTBmMTljNTBkMTM2Y2ZlZjFhMGM4ZDAxZWQ4OTAwOWU4NWJkOTk3M2JmM2ZjYjEzNmQxZjUwMjdkZDc1YjVkY2QwNTcwMDJmZTMiLCJpYXQiOjE1NzE3MzM0NTcsIm5iZiI6MTU3MTczMzQ1NywiZXhwIjoxNTczMDI5NDU3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.0QCyT2bdtQP6dA4pib7cju1dh0RKCEHwIL3HKLvF-P-YQ7WFciXt7mppVUOmqiebU3kwTG0OUNX-9aYIn-GnSPwk2h4G-9aOPvmMXyNbkwX9G9mE_YIvp8ZPDlNcKnypZoX07rOYpbrkytCRe0Nkrc139DkjSf7I9Oe5TbHviI5h6d06f8BnhAdUbpyPAZF-8W4CC4Cnez6E_MxX7RrNSppFrPA3FdAhSniw3H53MfxM5XK0w7obnlef58ARtc5tdvj_6IAoqqPPp9TOtDnzMV7atggbQubqquK6Gedxuv1izIAC1FO1XSLpNIqZ3iE2yhcHWz172j1Qetl9TMYCk7dAUw_-befxnihS9nQwcR0wV2EHKtY2lYxpV2QCBbXiM1XFTkU38QSwLOXJPp5Lp2oa0C3ED7dbgDu-rFZKrGFhmSBE1B5ZQJJ5cY4kuXHNCLaGQPADb8zokyAKFK5cTxwnE7aXqpIXG3CegB7XYf4lCsZxY2lA2nIwTbb-lpAtWfivWqkEh8GF89b6VlVeySgrwQ2mbqZh7BEZzz9vxN2e3o2rArzLV2yxswrP-0JO31D0Lh4-0erQCNwNvWSbcj_AYSREh0vk06yphbR2cpvNT4BhjdZIGc3syiwXFmRqQAxD56FUbSXVTDbOsD4Cb-FAo7NW9G3Tb8M5ASY8nSQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://video.local/api/media/total/smande5",
+					"protocol": "http",
+					"host": [
+						"video",
+						"local"
+					],
+					"path": [
+						"api",
+						"media",
+						"total",
+						"smande5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Video MetaData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Video",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
