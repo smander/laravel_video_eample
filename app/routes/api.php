@@ -26,7 +26,7 @@ Route::group(['middleware' => 'auth:api','prefix' => 'media'], function () {
     Route::post('/save', 'User\MediaController@store')->middleware('auth:api');
 
     //Update
-    Route::patch('/update', 'User\MediaController@update');
+    Route::patch('/update/{video_id}', 'User\MediaController@update');
 });
 
 

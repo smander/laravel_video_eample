@@ -50,10 +50,12 @@ class MediaRepository implements MediaRepositoryInterface
     * Deletes a post.
     *
     * @param int
+     *
+     * @return bool
     */
     public function delete($media_id)
     {
-        $this->mediaModel::destroy($media_id);
+        return $this->mediaModel::destroy($media_id);
     }
 
     /**
@@ -61,10 +63,11 @@ class MediaRepository implements MediaRepositoryInterface
     *
     * @param int
     * @param array
+     * @return Media
     */
     public function update($media_id, array $media_data)
     {
-        $this->mediaModel::find($media_id)->update($media_data);
+        return $this->mediaModel::find($media_id)->update($media_data);
     }
 
 }

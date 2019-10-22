@@ -37,7 +37,7 @@ class MediaController extends \App\Http\Controllers\Controller
 
         try {
 
-            $media = (new MediaService())->save($request,auth()->user());
+            $media = (new MediaService($this->mediaRepository))->save($request,User::class);
 
 
 
@@ -68,12 +68,13 @@ class MediaController extends \App\Http\Controllers\Controller
 
         try {
 
-            $prepared_data = $request->all();
-            $media = (new MediaService())->update($prepared_data,auth()->user());
+            $prepared_data = $request->except('video_id');
+
+            $media = (new MediaService($this->mediaRepository))->update($request->video_id,$prepared_data);
 
 
             if($media){
-                return response()->json(['success' => true, 'data' => $media->id ], 200);
+                return response()->json(['success' => true, 'data' => 'updated' ], 200);
             }
             else{
                 return response()->json(['success' => false, 'data' => 'Cannot save due issue'], 400);

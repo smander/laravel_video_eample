@@ -38,6 +38,7 @@ class MediaService{
 
             $media = $this->mediaRepository->create($prepared_data);
 
+
             if($media){
                 return $media;
             }
@@ -54,12 +55,12 @@ class MediaService{
     }
 
 
-    public function update($media_request, $model){
+    public function update($media_id, array $mediaData){
 
         try{
 
 
-            $media = $this->mediaRepository->update($media_request);
+            $media = $this->mediaRepository->update($media_id, $mediaData);
 
             if($media){
                 return $media;
